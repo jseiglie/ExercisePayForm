@@ -1,0 +1,47 @@
+.formName {
+    border-radius: 0;
+}
+
+.alertMessage {
+    padding: 0;
+    margin: 0;
+}
+
+.btnGroup {
+    text-align: right;
+    
+}
+
+.radioGr {
+    background-color: grey;
+    border-radius: 2em;
+    padding-left: 1em;
+}
+
+.ammLabel {
+    margin-bottom: 0.5em;
+}
+
+input:focus {
+    border: 2px blue solid;
+}
+
+.notes {
+    margin-top: 0.5em;
+}
+
+.blink {
+    animation: blink 1s steps(1, end) infinite;
+  }
+  
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
