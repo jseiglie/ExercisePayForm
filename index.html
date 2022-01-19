@@ -16,58 +16,111 @@
 <body>
     <div class="container">
         <div class="form-control">
-            <div class="row">
+            <div class="row form">
                 <div class="alert alert-secondary" role="alert">
                     <h4>Payment form example</h5>
                 </div>
             </div>
-            <div class="alert alert-danger" role="alert">
-                <span class="blink"><i class="fal fa-exclamation-triangle"></i></span> Some fields are missing
+            <div class="myAlert dnone">
+                <div class="alert alert-danger " role="alert">
+                    <span class="blink"><i class="fal fa-exclamation-triangle"></i></span> Some fields are missing
+                </div>
             </div>
-
-            <div class="container">
-                <form class="row g-3">
+            <div class="form" id="myForm">
+                <form class="row g-3 needs-validation" novalidate>
                     <div class="col-md-6 ">
                         <label for="carnNo" class="form-label">Card #</label>
-                        <input type="number" class="form-control" required id="cardNo" placeholder="XXXXXXXXXXXXXXXX">
+                        <input type="number" class="form-control myInputs" id="cardNo" placeholder="XXXXXXXXXXXXXXXX"
+                            required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            That's invalid
+                        </div>
                     </div>
                     <div class="col-md-3">
                         <label for="cvc" class="form-label">CVC</label>
-                        <input type="number" class="form-control" required id="cvc" placeholder="XXX">
+                        <input type="number" class="form-control myInputs" id="cvc" placeholder="XXX" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            That's invalid
+                        </div>
                     </div>
+
                     <div class="form-group col-3">
-                        <label class="ammLabel" for="Amount">Amount ($)</label>
+                        <label class="ammLabel" for="amount">Amount ($)</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
-                            <span class="input-group-text" id="Amount">$</span>
+                                <span class="input-group-text" id="amount">$</span>
                             </div>
-                            <input type="text" class="form-control" id="Amount" placeholder="Amount" aria-describedby="Amount">
+                            <input type="number" class="form-control myInputs" id="amount" placeholder="0.00"
+                                aria-describedby="Amount" required>
+                        </div>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            That's invalid
                         </div>
                     </div>
                     <div class="col-md-6">
                         <label for="firstName" class="form-label">First Name</label>
-                        <input type="text" class="form-control" required id="firstName" placeholder="First name">
+                        <input type="text" class="form-control myInputs" id="firstName" placeholder="First name"
+                            required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            That's invalid
+                        </div>
                     </div>
                     <div class="col-md-6">
                         <label for="lasttName" class="form-label">Last Name</label>
-                        <input type="text" class="form-control" required id="lastName" placeholder="Last name">
+                        <input type="text" class="form-control myInputs" id="lastName" placeholder="Last name" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            That's invalid
+                        </div>
                     </div>
                     <div class="col-md-6">
                         <label for="city" class="form-label">City</label>
-                        <input type="text" class="form-control" required id="city" placeholder="City">
+                        <input type="text" class="form-control myInputs" id="city" placeholder="City" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            That's invalid
+                        </div>
                     </div>
                     <div class="col-md-3">
                         <label for="state" class="form-label">State</label>
-                        <select name="state_" required id="state" class="form-select form-control">
-                            <option selected>-----</option>
+                        <select name="state_" id="state" class="form-select form-control myInputs" required>
+                            <option selected disabled value>-----</option>
                             <option value="Ny">New York</option>
                             <option value="Fl">Florida</option>
                             <option value="Mi">Mississippi</option>
                         </select>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            That's invalid
+                        </div>
                     </div>
                     <div class="col-md-3">
                         <label for="zip" class="form-label">Zip Code</label>
-                        <input type="number" class="form-control" required id="zip">
+                        <input type="number" class="form-control myInputs" id="zip" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            That's invalid
+                        </div>
                     </div>
                     <div class="col-md-6">
                         <p>We accept</p>
@@ -75,26 +128,27 @@
                             <div class="form-check form-check-inline">
 
                                 <input class="form-check-input" name="inlineRadioOptions" type="radio" id="visa"
-                                    value="visa">
+                                    value="visa" required>
                                 <label class="form-check-label" for="visa">
                                     <i class="fab fa-cc-visa"></i>
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" name="inlineRadioOptions" type="radio" id="mastercard"
-                                    value="mastercard">
+                                    value="mastercard" required>
                                 <label class="form-check-label" for="mastercard">
                                     <i class="fab fa-cc-mastercard"></i>
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" name="inlineRadioOptions" type="radio" id="paypal"
-                                    value="paypal">
+                                    value="paypal" required>
                                 <label class="form-check-label" for="paypal">
                                     <i class="fab fa-paypal"></i>
                                 </label>
                             </div>
                         </span>
+
                     </div>
                     <div class="col-md-6">
                         <label for="message" class="form-label">Message</label>
@@ -107,7 +161,7 @@
         </div>
         <div class="alert alert-secondary btnGroup" role="alert">
             <button type="submit" role="button" class="btn btn-secondary">Cancel</button>
-            <button type="submit" role="button" class="btn btn-primary">Submmit</button>
+            <button type="submit" role="button" class="btn btn-primary submitbtn">Submmit</button>
         </div>
     </div>
 
@@ -116,6 +170,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>

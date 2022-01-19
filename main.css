@@ -45,3 +45,11 @@ input:focus {
       opacity: 1;
     }
   }
+
+  .dnone {
+    display:none ;
+  }
+
+  .dshow {
+    display:block
+  }
